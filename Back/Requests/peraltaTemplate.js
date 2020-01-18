@@ -1,12 +1,5 @@
-const http = require('http');
-const request = require('request');
-const port = process.env.PORT || 3000
 
-
-
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/html');
+  /*res.setHeader('Content-Type', 'text/html');
 	var containerTasca = []
 
 
@@ -112,10 +105,7 @@ const server = http.createServer((req, res) => {
 		
 	}
 
-	//res.write("<h1>this is a title</h1>");
-
-});
-
 server.listen(port,() => {
   console.log(`Server running at port `+port);
 });
+*/
