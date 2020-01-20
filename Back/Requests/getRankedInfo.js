@@ -1,1 +1,0 @@
-//mesmo que get unique ids mas para a ranked info toda

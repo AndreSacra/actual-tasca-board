@@ -9,7 +9,7 @@ const app = express();
 
 app.get('/', function (req, res) {
     var data = getIds.getUniqueIdsForTasqueiros();
-    res.end(data)
+    res.end(data);
   })
 
 // Dynamic listen; either deployed or local port 3000

@@ -1,11 +1,15 @@
-const Tasq = require('../BaseInfo/Tasqueiro');
-const API = require('../BaseInfo/APIStuff.js');
+const Tasqueiro = require('../BaseInfo/Tasqueiro');
+const API = require('../BaseInfo/APIStuff');
 const request = require('request');
 
 exports.getUniqueIdsForTasqueiros = function () {
-    var tasca = Array.from(Tasq.getAllTasqueiros());
+    var apiInfo = new API;
+    
+    var tasca = [];
+    tasca = Array.from(Tasqueiro.getAllTasqueiros());
+
     tasca.forEach(element => {
-        request(API.InitialURLByName + element.name + "?api_key=" + API.API_KEY, { json: true }, (err, res, body) => {
+        request(apiInfo.getStartingURLGetIds() + element.name + "?api_key=" + apiInfo.getApiKey(), { json: true }, (err, res, body) => {
             if (err) {
                 return console.log(err);
             }
