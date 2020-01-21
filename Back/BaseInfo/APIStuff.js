@@ -3,7 +3,7 @@ class APIStuff {
     
     //API key; changes daily (for now)
     getApiKey(){
-        return "RGAPI-0f60a01e-cac4-43ec-b0c2-0410511d29c1";
+        return "RGAPI-6df31c7f-942f-4cbf-a2e5-7638ba46bddd";
     }
 
     //to get the unique summoner ID

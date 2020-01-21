@@ -2,7 +2,7 @@
 
 var tasqInfo = [];
 
-function rankedInfo(queueType, summonerName, hotStreak, miniSeries, wins, veteran, losses, rank, leagueId, inactive, freshBlood, tier, summonerId, leaguePoints){
+exports.getRankedInfo = function(queueType, summonerName, hotStreak, miniSeries, wins, veteran, losses, rank, leagueId, inactive, freshBlood, tier, summonerId, leaguePoints){
     this.queueType = queueType;         //string
     this.summonerName = summonerName;	//string
     this.hotStreak = hotStreak;	        //boolean
@@ -19,14 +19,11 @@ function rankedInfo(queueType, summonerName, hotStreak, miniSeries, wins, vetera
     this.leaguePoints = leaguePoints;   //int
 }
 
-function getInfoArray(){
+exports.getInfoArray = function(){
     return this.tasqInfo;
 }
 
-function addToArray(something){
+exports.addToArray = function(something){
     tasqInfo.push(something);
+    console.log('Adicionei o ' + something.summonerName);
 }
-
-module.exports = rankedInfo;
-module.exports = getInfoArray;
-module.exports = addToArray;
