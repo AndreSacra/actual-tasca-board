@@ -2,7 +2,7 @@
 
 var tasqInfo = [];
 
-exports.getRankedInfo = function(queueType, summonerName, hotStreak, miniSeries, wins, veteran, losses, rank, leagueId, inactive, freshBlood, tier, summonerId, leaguePoints){
+function GetRankedInfo(queueType, summonerName, hotStreak, miniSeries, wins, veteran, losses, rank, leagueId, inactive, freshBlood, tier, summonerId, leaguePoints){
     this.queueType = queueType;         //string
     this.summonerName = summonerName;	//string
     this.hotStreak = hotStreak;	        //boolean
@@ -19,11 +19,18 @@ exports.getRankedInfo = function(queueType, summonerName, hotStreak, miniSeries,
     this.leaguePoints = leaguePoints;   //int
 }
 
-exports.getInfoArray = function(){
+GetRankedInfo.prototype.getWins = function(){
+    return this.wins;
+}
+
+GetRankedInfo.prototype.getInfoArray = function(){
     return this.tasqInfo;
 }
 
-exports.addToArray = function(something){
+GetRankedInfo.prototype.addToArray = function(something){
     tasqInfo.push(something);
-    console.log('Adicionei o ' + something.summonerName);
+    console.log('Adicionei o ' + something.summonerName + '.');
+    console.log('Atualmente está em ' + something.tier + " " + something.rank + ', com ' + something.wins +' wins e ' + something.losses + ' losses.');
 }
+
+module.exports = GetRankedInfo;
