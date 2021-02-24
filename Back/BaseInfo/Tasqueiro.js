@@ -1,4 +1,4 @@
-//initial array with the participants and theirs unique RIOT ids
+//initial array with the participants and their unique RIOT ids
 
 var Tasqueiros = [];
 Tasqueiros.push(Henrique = { "id": "", "name": "ShadowPsych0" });
